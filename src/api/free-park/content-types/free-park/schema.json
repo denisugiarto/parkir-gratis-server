@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "free_parks",
+  "info": {
+    "singularName": "free-park",
+    "pluralName": "free-parks",
+    "displayName": "Free Park",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "isConfirmed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "unique": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "indomaret",
+        "alfamart",
+        "toko"
+      ],
+      "default": "toko",
+      "required": true
+    }
+  }
+}
